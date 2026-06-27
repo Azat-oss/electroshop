@@ -28,8 +28,8 @@ DepoElectro — это современная платформа для прод
 ### Шаг 1: Клонирование репозитория
 Откройте терминал и выполните команду для скачивания проекта с GitHub:
 ```bash
-1 git clone https://github.com/your-username/electrostore.git
-2 cd electrostore
+1 git clone https://github.com/Azat-oss/electroshop.git
+2 cd electroshop
 ```
 ### Шаг 2: Установка зависимостей Laravel
 
