@@ -3,13 +3,11 @@
 namespace Database\Seeders;
 
 
+use App\Models\Category; // <--- ВАЖНО: Импорт модели
 use Illuminate\Database\Seeder;
 
 class CategorySeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         $categories = [
@@ -36,9 +34,10 @@ class CategorySeeder extends Seeder
         ];
 
         foreach ($categories as $category) {
-            Category::query()->updateOrCreate([
-                'name' => $category['name'],
-            ], $category);
+            Category::updateOrCreate(
+                ['name' => $category['name']], 
+                $category
+            );
         }
     }
 }

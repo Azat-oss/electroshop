@@ -9,19 +9,16 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+     public function up(): void
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string(column:'name')-> unique();
-            $table->boolean(column:'is_active')-> default(value:true);
+            $table->string('name')->unique(); // Убрали column:
+            $table->boolean('is_active')->default(true); // Убрали column: и value:
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('categories');
